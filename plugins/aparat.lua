@@ -15,9 +15,9 @@ local function run(msg, matches)
   local items = jdat.videobysearch
   text = 'نتیجه جستوجو در آپارات: \n'
   for i = 1, #items do
-  text = text..'\n'..i..'- '..items[i].title..'  -  تعداد بازدید: '..items[i].visit_cnt..'\n    لینک: aparat.com/v/'..items[i].uid
+  text = text..'\n'..i..'- '..items[i].title..'  -  تعداد بازدید: '..items[i].visit_cnt..'\n    لینک: aparat.com/v/' .items[i].uid
   end
-  text = text..'\n\n@GemTG'
+  text = text..'\n\n#MegaEagle'
   return text
  end
 end
