@@ -9,7 +9,7 @@ send_msg(extra.chatid, 'all supergroup msgs removed', ok_cb, false)
 end
 end
 local function run(msg, matches)
-if matches[1] == 'rmmsg' and is_owner(msg) then
+if matches[1] == 'delall' and is_owner(msg) then
             if msg.to.type == 'channel' then
             if tonumber(matches[2]) > 9999 or tonumber(matches[2]) < 1 then
             return "error!"
@@ -24,7 +24,7 @@ end
 end
 return {
     patterns = {
-        '^[!/#](rmmsg) (%d*)$'
+        '^[!/#](delall) (%d*)$'
     },
     run = run
 }
