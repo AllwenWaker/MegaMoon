@@ -58,8 +58,8 @@ function msg_valid(msg)
   end
 
   -- Before bot was started
-  if msg.date < os.time() - 5 then 
-    print('\27[36mNot valid: old msg\27[39m') 
+  if msg.date < os.time() - 5 then
+    print('\27[36mNot valid: old msg\27[39m')
     return false
   end
 
@@ -227,31 +227,40 @@ function create_config( )
     "broadcast",
     "invite",
     "all",
-    "plugins",
     "leave_ban",
 	"supergroup",
 	"whitelist",
-	"msg_checks"
+	"msg_checks",
+	"write",
+	"aparat",
+	"type",
+	"expire",
+	"instagram",
+	"inpm",
+	"plugins",
+	"delall",
+	"lock_fwd",
+	"lock_emoji",
+        "calc"
     },
-    sudo_users = {174770816},--Sudo users
+    sudo_users = {174770816,105831687},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Mega_Moon V.4
-An advanced administration bot based on TG-CLI written in Lua Open source!
+    about_text = [[MegaEagle v4
+An advanced administration bot based on TG-CLI written in Lua
 
-https://github.com/allwenwaker/megamoon
+https://github.com/AriPars/MegaEagle
 
-
-Admins:
-@Allwen [Developer, Founder, Manager]
-
-@alforoshtak [Developer, Manager]
+Admins
+@allwen [Developer,Founder]
+@parsaalemi [Developer,Founder]
 
 Special thanks to
-@allwen
 @makan
+@alfroshtak
 
-Our channel
-@MegaMoonTeam
+Our channels
+@Eagle_Team [English]
+
 ]],
     help_text_realm = [[
 Realm Commands:
@@ -454,9 +463,7 @@ Returns group logs
 !banlist
 will return group ban list
 
-
-
-**You can use "#", "!", "/" or " " to begin all commands
+**You can use "#", "!", or "/" to begin all commands
 
 
 *Only owner and mods can add bots in group
