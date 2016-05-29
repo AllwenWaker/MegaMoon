@@ -6,7 +6,7 @@ local function mathjs(exp)
   local b,c = http.request(url)
   local text = nil
   if c == 200 then
-    text = 'نتیجه : '..b
+    text = "🔧 جواب : '..b
   
   elseif c == 400 then
     text = b
